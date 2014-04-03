@@ -115,7 +115,9 @@ public class SummarizeBuildResults {
                 if (lastBuildFile.exists()) {
                     return lastBuildDirectory;
                 } else if (contents.size() > 1) {
-                    System.out.println(">>>> Couldn't find [" + latestBuildFileName + "] using " + contents.get(2));
+                    //System.out.println(">>>> Couldn't find [" + latestBuildFileName + "] using " + contents.get(2));
+                    System.out.println(">>>> Couldn't find [" + latestBuildFileName + "] using "/* + contents.get(2)*/);    // FIXME I don't remember how this works, but it's failing on the new jenkins
+
                     return contents.get(1);
                 }
             }
